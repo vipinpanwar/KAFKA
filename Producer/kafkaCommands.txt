@@ -1,0 +1,16 @@
+Ubuntu
+1.) go to bin directory and run the below command :
+sh zookeeper-server-start.sh ../config/zookeeper.properties
+
+2.) how to run the kafka brokers
+    sh ../bin/kafka-server-start.sh server.properties
+
+3.) To list the available topics
+sh kafka-topics.sh  --bootstrap-server localhost:9092 --list
+   or
+sh kafka-topics.sh --zookeeper localhost:2181 --list
+
+4.) To view the consumer messages
+sh kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <topic-name>
+//generally in kafka irrespective of the data is published successfully we usually send the ok
+// status in rest api and then process the data.
